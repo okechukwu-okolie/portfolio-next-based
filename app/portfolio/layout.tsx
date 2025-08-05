@@ -1,11 +1,14 @@
+'use client'
 import Link from 'next/link'
-import React from 'react'
+import React,{useState} from 'react'
 
 export default function PortfolioLayout({children,}:Readonly<{children:React.ReactNode}>) {
+
+  const [hamburger, setHamburger]= useState(false)
   return (
     <div>
       <div>
-        <ul className='flex gap-7'>
+        <ul className={``}>
           <Link href={'/portfolio/react'}><li>React Projects</li></Link>
           <Link href={'/portfolio/nextjs'}><li>Next js Projects</li></Link>
           <Link href={'/portfolio/javascript-link'}><li>Javascript Projects</li></Link>
