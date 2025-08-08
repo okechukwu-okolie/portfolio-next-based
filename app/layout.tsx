@@ -1,3 +1,4 @@
+
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -24,20 +25,32 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}antialiased mx-5 mt-5`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable}antialiased mx-5 mt-5`}
+      >
         <header className="flex justify-between h-[5vh] ">
           <div>
             <ul className="flex gap-5">
-                <li><Link href={'/'}>Home</Link></li>
-                <li><Link href={'/portfolio'}>Portfolio</Link></li>
-                <li><Link href={'/testimonial'}>Testimonial</Link></li>
-                <li><Link href={'/contact'}>Contact</Link></li>
+              <li>
+                <Link href={"/"}>Home</Link>
+              </li>
+              <li>
+                <Link href={"/portfolio"}>Portfolio</Link>
+              </li>
+              <li>
+                <Link href={"/testimonial"}>Testimonial</Link>
+              </li>
+              <li>
+                <Link href={"/contact"}>Contact</Link>
+              </li>
             </ul>
           </div>
           <div>
-            <PiSunLight size={25}/>
+            <PiSunLight size={25} />
           </div>
         </header>
         {children}
